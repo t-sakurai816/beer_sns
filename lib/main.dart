@@ -31,33 +31,37 @@ class MyApp extends StatelessWidget {
             return Scaffold(
               // appBar: Header(headerTitle: 'beer'), //各画面で描画するのでいらない
               body: _pageList[model.currentIndex], //中身を描画
-              bottomNavigationBar: BottomNavigationBar(
-                //footer部分
-                type: BottomNavigationBarType.fixed,
-                items: [
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.home),
-                    label: '', //home
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.menu_book_outlined),
-                    label: '', //wiki
-                  ),
-                  BottomNavigationBarItem(
-                    icon: Icon(Icons.email_outlined),
-                    label: '', //DM
-                  ),
-                ],
-                currentIndex: model.currentIndex,
-                onTap: (index) {
-                  model.currentIndex = index;
-                },
-                selectedItemColor: _primaryAccentColor, //選んだ物の色
-                unselectedItemColor: Colors.black45, //選んでない物の色
-                backgroundColor: _primaryColor, //footer背景色
-              ),
+              bottomNavigationBar: buildBottomNavigationBar(model),
             );
           }),
         ));
+  }
+
+  BottomNavigationBar buildBottomNavigationBar(FooterModel model) {
+    return BottomNavigationBar(
+      //footer部分
+      type: BottomNavigationBarType.fixed,
+      items: [
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: '', //home
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.menu_book_outlined),
+          label: '', //wiki
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.email_outlined),
+          label: '', //DM
+        ),
+      ],
+      currentIndex: model.currentIndex,
+      onTap: (index) {
+        model.currentIndex = index;
+      },
+      selectedItemColor: _primaryAccentColor, //選んだ物の色
+      unselectedItemColor: Colors.black45, //選んでない物の色
+      backgroundColor: _primaryColor, //footer背景色
+    );
   }
 }
