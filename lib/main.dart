@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/footer_model.dart';
-import 'routes/home.dart';
+import 'routes/home/home_main.dart';
 import 'routes/wiki.dart';
 import 'routes/dm.dart';
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   final _primaryAccentColor = Colors.orangeAccent; //primaryAccentColorを指定
 
   final List _pageList = [
-    Home(),
+    HomeMain(),
     Wiki(),
     Dm(),
   ];
