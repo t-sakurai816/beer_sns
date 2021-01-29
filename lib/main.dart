@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'models/footer_model.dart';
 import 'routes/home/home_main.dart';
 import 'routes/wiki.dart';
+import 'routes/notice.dart';
 import 'routes/dm.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   final List _pageList = [
     HomeMain(),
     Wiki(),
+    Notice(),
     Dm(),
   ];
 
@@ -49,6 +51,10 @@ class MyApp extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Icon(Icons.menu_book_outlined),
           label: '', //wiki
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.notifications_none),
+          label: '', //notice
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.email_outlined),
