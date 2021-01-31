@@ -58,14 +58,11 @@ class Home1 extends StatelessWidget {
 }
 
 class NewWidget extends StatelessWidget {
-  const NewWidget({
-    Key key,
-  }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size; //画面サイズを取得
     return Container(
-      width: 300,
+      width: size.width * 0.75, //アイコンの横幅
       child: ButtonBar(
           buttonPadding: EdgeInsets.all(0.0),
           alignment: MainAxisAlignment.spaceAround,
