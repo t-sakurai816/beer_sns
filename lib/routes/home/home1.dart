@@ -8,6 +8,9 @@ class Home1 extends StatelessWidget {
     'Name': 'ツイート太郎',
     'text':
         'ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。ビールがうまい。',
+    'commentNum': '3',
+    'retweetNum': '2',
+    'likeNum': '5',
     'timestamp': '3m'
   };
   @override
@@ -57,7 +60,7 @@ class Home1 extends StatelessWidget {
                                     iconSize: 18.0,
                                     onPressed: () {},
                                   ),
-                                  Text(''),
+                                  Text(_tweetsData['commentNum']),
                                 ],
                               ),
                               Row(
@@ -67,6 +70,7 @@ class Home1 extends StatelessWidget {
                                     iconSize: 18.0,
                                     onPressed: () {},
                                   ),
+                                  Text(_tweetsData['retweetNum']),
                                 ],
                               ),
                               Row(
@@ -76,6 +80,7 @@ class Home1 extends StatelessWidget {
                                     iconSize: 18.0,
                                     onPressed: () {},
                                   ),
+                                  Text(_tweetsData['likeNum']),
                                 ],
                               ),
                               IconButton(
