@@ -41,11 +41,9 @@ class HomeHeader extends StatelessWidget with PreferredSizeWidget {
 
   TabBar buildTabBar(BuildContext context) {
     return TabBar(
-      isScrollable: true,
       tabs: _tabs.map((TabInfo tab) {
         return Container(
           height: 20.0,
-          width: MediaQuery.of(context).size.width * 0.4, //TabBar幅
           child: Tab(text: tab.label), //TabBarラベル
         );
       }).toList(),
