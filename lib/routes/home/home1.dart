@@ -43,7 +43,48 @@ class Home1 extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      child: NewWidget(),
+                      child: Container(
+                        width:
+                            MediaQuery.of(context).size.width * 0.8, //アイコンの横幅
+                        child: ButtonBar(
+                            buttonPadding: EdgeInsets.all(0.0),
+                            alignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: Icon(Icons.chat_bubble_outline),
+                                    iconSize: 18.0,
+                                    onPressed: () {},
+                                  ),
+                                  Text(''),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: Icon(Icons.cached),
+                                    iconSize: 18.0,
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: Icon(Icons.favorite_border),
+                                    iconSize: 18.0,
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
+                              IconButton(
+                                icon: Icon(Icons.share),
+                                iconSize: 18.0,
+                                onPressed: () {},
+                              ),
+                            ]),
+                      ),
                     ),
                   ],
                 ),
@@ -53,54 +94,6 @@ class Home1 extends StatelessWidget {
           itemCount: _tweetsNum,
         ),
       ),
-    );
-  }
-}
-
-class NewWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size; //画面サイズを取得
-    return Container(
-      width: size.width * 0.75, //アイコンの横幅
-      child: ButtonBar(
-          buttonPadding: EdgeInsets.all(0.0),
-          alignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.chat_bubble_outline),
-                  iconSize: 18.0,
-                  onPressed: () {},
-                ),
-                Text(''),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.cached),
-                  iconSize: 18.0,
-                  onPressed: () {},
-                ),
-              ],
-            ),
-            Row(
-              children: <Widget>[
-                IconButton(
-                  icon: Icon(Icons.favorite_border),
-                  iconSize: 18.0,
-                  onPressed: () {},
-                ),
-              ],
-            ),
-            IconButton(
-              icon: Icon(Icons.share),
-              iconSize: 18.0,
-              onPressed: () {},
-            ),
-          ]),
     );
   }
 }
