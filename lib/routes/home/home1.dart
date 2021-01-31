@@ -58,7 +58,9 @@ class Home1 extends StatelessWidget {
                                   IconButton(
                                     icon: Icon(Icons.chat_bubble_outline),
                                     iconSize: 18.0,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      print('コメントをタップ');
+                                    },
                                   ),
                                   Text(_tweetsData['commentNum']),
                                 ],
@@ -68,7 +70,9 @@ class Home1 extends StatelessWidget {
                                   IconButton(
                                     icon: Icon(Icons.cached),
                                     iconSize: 18.0,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      print('リツイートをタップ');
+                                    },
                                   ),
                                   Text(_tweetsData['retweetNum']),
                                 ],
@@ -78,7 +82,9 @@ class Home1 extends StatelessWidget {
                                   IconButton(
                                     icon: Icon(Icons.favorite_border),
                                     iconSize: 18.0,
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      print('いいねをタップ');
+                                    },
                                   ),
                                   Text(_tweetsData['likeNum']),
                                 ],
