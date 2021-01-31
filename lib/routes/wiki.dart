@@ -14,7 +14,8 @@ class Wiki extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(2.0),
               child: Image.network(
-                  'https://pbs.twimg.com/profile_images/1348572281681760262/sVPExbGK.jpg'),
+                'https://pbs.twimg.com/profile_images/1348572281681760262/sVPExbGK.jpg',
+              ),
             ),
           );
         }),
