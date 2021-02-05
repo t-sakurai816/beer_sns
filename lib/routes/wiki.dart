@@ -26,8 +26,14 @@ class Wiki extends StatelessWidget {
                 return Center(
                   child: Padding(
                     padding: const EdgeInsets.all(2.0),
-                    child: Image.network(
-                      'https://pbs.twimg.com/profile_images/1356263946638950410/s72cF6s2.jpg',
+                    child: GestureDetector(
+                      onTap: () {
+                        // タップで反応
+                        print('画像をタップ');
+                      },
+                      child: Image.network(
+                        'https://pbs.twimg.com/profile_images/1356263946638950410/s72cF6s2.jpg',
+                      ),
                     ),
                   ),
                 );
