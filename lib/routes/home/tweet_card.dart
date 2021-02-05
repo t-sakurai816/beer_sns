@@ -29,7 +29,7 @@ class TweetCard extends StatelessWidget {
                           leading: CircleAvatar(
                             // NetworkImageでURLの画像を取得
                             backgroundImage: NetworkImage(
-                                'https://pbs.twimg.com/profile_images/1348572281681760262/sVPExbGK.jpg'),
+                                'https://pbs.twimg.com/profile_images/1356263946638950410/s72cF6s2.jpg'),
                           ),
                           title: Text(_tweetsData['Name']), //ユーザーの名前
                           subtitle:
