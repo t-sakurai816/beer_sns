@@ -89,10 +89,16 @@ class TweetCard extends StatelessWidget {
                                   Text(_tweetsData['likeNum']),
                                 ],
                               ),
-                              IconButton(
-                                icon: Icon(Icons.share),
-                                iconSize: 18.0,
-                                onPressed: () {},
+                              Row(
+                                children: [
+                                  IconButton(
+                                    icon: Icon(Icons.share),
+                                    iconSize: 18.0,
+                                    onPressed: () {
+                                      print('シェアマークをタップ');
+                                    },
+                                  ),
+                                ],
                               ),
                             ]),
                       ),
